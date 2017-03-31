@@ -7,7 +7,7 @@ if (!fs.existsSync('paintings')) {
 }
 
 const outputStream = fs.createWriteStream('paintings/' + (new Date).getTime() + '.txt');
-const ws = new WebSocket('wss://ws-064f7ddfdc34212b7.wss.redditmedia.com/place?m=' + secretSauce);
+const ws = new WebSocket('wss://ws-0fbe136e4be6350f4.wss.redditmedia.com/place?m=' + secretSauce);
 
 ws.on('message', (data) => {
 	let response;
