@@ -10,3 +10,6 @@ Before running:
 4.) Find the websocket connection
 5.) Copy the "m" value from "/place?m=abc123....789"
 6.) Go into the code and put that value in for "secretSauce"
+
+Running:
+`node index.js`
