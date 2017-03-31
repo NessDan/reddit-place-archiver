@@ -10,5 +10,15 @@ const outputStream = fs.createWriteStream('paintings/' + (new Date).getTime() + 
 const ws = new WebSocket('wss://ws-064f7ddfdc34212b7.wss.redditmedia.com/place?m=' + secretSauce);
 
 ws.on('message', (data, flags) => {
-	outputStream.write(data);
+	let response;
+
+	try {
+		response = JSON.parse(data).payload;
+	} catch (e) {
+		console.error(err);
+	}
+
+	const savedData = [response.x, response.y, response.color, response.author, (new Date).getTime()].toString() + "\r\n";
+
+	outputStream.write(savedData);
 });
