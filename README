@@ -1,0 +1,12 @@
+# Steps to get this up and running
+Pre-requisites: node.js & npm
+
+Setup: `npm install`
+
+Before running:
+1.) Open an Incognito window
+2.) Open up the Dev Tools, go to Network Tab
+3.) Go to the /r/place subreddit
+4.) Find the websocket connection
+5.) Copy the "m" value from "/place?m=abc123....789"
+6.) Go into the code and put that value in for "secretSauce"
